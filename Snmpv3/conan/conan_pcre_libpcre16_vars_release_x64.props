@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="ConanVariables">
+    <Conanpcre_libpcre16RootFolder>C:/Users/bakel/.conan2/p/pcre27ff6c404b101/p</Conanpcre_libpcre16RootFolder>
+    <Conanpcre_libpcre16BinaryDirectories></Conanpcre_libpcre16BinaryDirectories>
+    <Conanpcre_libpcre16CompilerFlags></Conanpcre_libpcre16CompilerFlags>
+    <Conanpcre_libpcre16LinkerFlags></Conanpcre_libpcre16LinkerFlags>
+    <Conanpcre_libpcre16PreprocessorDefinitions>PCRE_STATIC=1;</Conanpcre_libpcre16PreprocessorDefinitions>
+    <Conanpcre_libpcre16IncludeDirectories></Conanpcre_libpcre16IncludeDirectories>
+    <Conanpcre_libpcre16ResourceDirectories></Conanpcre_libpcre16ResourceDirectories>
+    <Conanpcre_libpcre16LibraryDirectories>$(Conanpcre_libpcre16RootFolder)/lib;</Conanpcre_libpcre16LibraryDirectories>
+    <Conanpcre_libpcre16Libraries>pcre16.lib;</Conanpcre_libpcre16Libraries>
+    <Conanpcre_libpcre16SystemLibs></Conanpcre_libpcre16SystemLibs>
+  </PropertyGroup>
+</Project>

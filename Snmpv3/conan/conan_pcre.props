@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ImportGroup Label="PropertySheets">
+		<Import Condition="'$(conan_pcre_libpcre_props_imported)' != 'True'" Project="conan_pcre_libpcre.props"/>
+		<Import Condition="'$(conan_pcre_libpcreposix_props_imported)' != 'True'" Project="conan_pcre_libpcreposix.props"/>
+		<Import Condition="'$(conan_pcre_libpcre16_props_imported)' != 'True'" Project="conan_pcre_libpcre16.props"/>
+		<Import Condition="'$(conan_pcre_libpcre32_props_imported)' != 'True'" Project="conan_pcre_libpcre32.props"/>
+	</ImportGroup>
+	<PropertyGroup>
+		<conan_pcre_props_imported>True</conan_pcre_props_imported>
+	</PropertyGroup>
+</Project>

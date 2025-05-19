@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="ConanVariables">
+    <Conanpcre_libpcreposixRootFolder>C:/Users/bakel/.conan2/p/pcre27ff6c404b101/p</Conanpcre_libpcreposixRootFolder>
+    <Conanpcre_libpcreposixBinaryDirectories></Conanpcre_libpcreposixBinaryDirectories>
+    <Conanpcre_libpcreposixCompilerFlags></Conanpcre_libpcreposixCompilerFlags>
+    <Conanpcre_libpcreposixLinkerFlags></Conanpcre_libpcreposixLinkerFlags>
+    <Conanpcre_libpcreposixPreprocessorDefinitions></Conanpcre_libpcreposixPreprocessorDefinitions>
+    <Conanpcre_libpcreposixIncludeDirectories></Conanpcre_libpcreposixIncludeDirectories>
+    <Conanpcre_libpcreposixResourceDirectories></Conanpcre_libpcreposixResourceDirectories>
+    <Conanpcre_libpcreposixLibraryDirectories>$(Conanpcre_libpcreposixRootFolder)/lib;</Conanpcre_libpcreposixLibraryDirectories>
+    <Conanpcre_libpcreposixLibraries>pcreposix.lib;</Conanpcre_libpcreposixLibraries>
+    <Conanpcre_libpcreposixSystemLibs></Conanpcre_libpcreposixSystemLibs>
+  </PropertyGroup>
+</Project>
