@@ -5,13 +5,17 @@
 
 int main(int argc, char** argv)
 {
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " <IP[:PORT]>" << std::endl;
+        return 1;
+    }
     netsnmp_session session, * ss;
     netsnmp_pdu* pdu;
 
     init_snmp("snmpdemoapp");
     snmp_sess_init(&session);
 
-    session.peername = _strdup("192.168.100.128:162"); // Your Ubuntu VM's IP
+    session.peername = _strdup(argv[1]); // use input IP:PORT from command line
     session.version = SNMP_VERSION_3;
 
     u_char engineID[] = { 0x80, 0x00, 0x00, 0x00, 0x01, 0x02, 0x03, 0x04 };
