@@ -2,6 +2,29 @@
 #include <net-snmp/net-snmp-includes.h>
 #include <string.h>
 #include <iostream>
+#include <vector>
+#include <string>
+#include <iomanip>
+
+std::vector<u_char> engineId(std::string engineID)
+
+{
+
+    std::vector<u_char> returnValue;
+
+    for (size_t i = 0; i < engineID.length(); i += 2) {
+
+        std::string byteString = engineID.substr(i, 2);
+
+        u_char byte = static_cast<u_char>(std::stoul(byteString, nullptr, 16));
+
+        returnValue.push_back(byte);
+
+    }
+
+    return returnValue;
+
+}
 
 int main(int argc, char** argv)
 {
@@ -17,12 +40,15 @@ int main(int argc, char** argv)
 
     session.peername = _strdup(argv[1]); // use input IP:PORT from command line
     session.version = SNMP_VERSION_3;
-
-    u_char engineID[] = { 0x80, 0x00, 0x00, 0x00, 0x01, 0x02, 0x03, 0x04 };
-    session.securityEngineID = engineID;
-    session.securityEngineIDLen = sizeof(engineID);
-    session.contextEngineID = engineID;
-    session.contextEngineIDLen = sizeof(engineID);
+    std::string xxxx = "8000000001020304";
+    std::vector<u_char> engineIDVec = engineId(xxxx);
+    for (u_char byte : engineIDVec)
+        std::cout << std::hex << std::setw(2) << std::setfill('0') << (int)byte << " ";
+    std::cout << std::endl;
+    session.securityEngineID = engineIDVec.data();
+    session.securityEngineIDLen = engineIDVec.size();
+    session.contextEngineID = engineIDVec.data();
+    session.contextEngineIDLen = engineIDVec.size();
 
     session.securityName = _strdup("myuser");
     session.securityNameLen = strlen(session.securityName);
