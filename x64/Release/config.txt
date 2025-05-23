@@ -1,0 +1,2 @@
+createUser -e 0x8000000001020304 myuser MD5 "authpass" DES "privpass"
+authUser log,execute,net myuser
